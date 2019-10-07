@@ -29,10 +29,10 @@ export default class App extends React.Component {
                 <AppIcon/>
                 <Image source = {icon} style={{width: 250, height: 110}}/>
                 <Text style={styles.sectionTitle}>Demo React Native App</Text>
-                <TextInput 
+                <TextInput
                     style = {styles.textInput}
                     placeholder = "Input text"
-                    placeholderTextColor = "#ffffff"
+                    placeholderTextColor = "#6F6F6F"
                     autoCapitalize="sentences"
                     underlineColorAndroid="transparent"
                     selectionColor={'white'}
@@ -50,24 +50,24 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1, 
-        justifyContent: "center", 
+        flex: 1,
+        justifyContent: "center",
         alignItems: "center",
-        backgroundColor: '#6F6F6F'
-        },
+        backgroundColor: Colors.white
+    },
     sectionTitle: {
         fontSize: 24,
         fontWeight: '800',
-        color: Colors.white,
+        color: Colors.black,
     },
-    input: {
+    textInput: {
         borderBottomWidth: 2,
         marginTop: 30,
         paddingTop: 10,
         paddingRight: 15,
         paddingLeft: 15,
-        fontSize: 34,
-        color: '#ffffff',
-        fontWeight: '600'
+        fontSize: 24,
+        color: '#6F6F6F',
+        fontWeight: '400'
     }
 })
