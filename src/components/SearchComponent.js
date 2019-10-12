@@ -38,6 +38,8 @@ export default class SearchComponent extends Component {
           }
         else {
           console.log(res);
+          let tempData = JSON.stringify(res);
+          alert(tempData);
           // this.props.navigator.push({
           //   title: res.title || 'No Title',
           //   body: res.body || 'no body',
