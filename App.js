@@ -1,6 +1,16 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, Image, TextInput } from 'react-native';
-import AppIcon from './appIcon';
+import {
+  Text,
+  View,
+  StyleSheet,
+  Image,
+  TextInput,
+  ActivityIndicator,
+  TouchableOpacity,
+  FlatList
+} from 'react-native';
+// import AppIcon from '.src/components/AppIcon';
+import SearchComponent from './src/components/SearchComponent';
 import {
   Header,
   LearnMoreLinks,
@@ -26,9 +36,9 @@ export default class App extends React.Component {
         };
         return(
             <View style={styles.container}>
-                <AppIcon/>
                 <Image source = {icon} style={{width: 250, height: 110}}/>
-                <Text style={styles.sectionTitle}>Demo React Native App</Text>
+
+                <SearchComponent/>
                 <TextInput
                     style = {styles.textInput}
                     placeholder = "Input text"
@@ -59,6 +69,12 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: '800',
         color: Colors.black,
+    },
+    sectionDescription: {
+      marginTop: 8,
+      fontSize: 18,
+      fontWeight: '400',
+      color: Colors.dark,
     },
     textInput: {
         borderBottomWidth: 2,
