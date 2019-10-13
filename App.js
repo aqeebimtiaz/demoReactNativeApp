@@ -7,7 +7,8 @@ import {
   TextInput,
   ActivityIndicator,
   TouchableOpacity,
-  FlatList
+  FlatList,
+  Navigator
 } from 'react-native';
 // import AppIcon from '.src/components/AppIcon';
 import SearchComponent from './src/components/SearchComponent';
@@ -37,7 +38,7 @@ export default class App extends React.Component {
         return(
             <View style={styles.container}>
                 <Image source = {icon} style={{width: 250, height: 110}}/>
-
+                
                 <SearchComponent/>
                 <TextInput
                     style = {styles.textInput}

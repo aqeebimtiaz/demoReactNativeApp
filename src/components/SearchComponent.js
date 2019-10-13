@@ -28,7 +28,7 @@ export default class SearchComponent extends Component {
   }
 
   handleSubmit() {
-    console.log('from handleSubmit' + this.state.username);
+    // console.log('from handleSubmit' + this.state.username);
     getUserInfo(this.state.username)
       .then((res) => {
           if(res.message === 'Not Found') {
@@ -39,6 +39,7 @@ export default class SearchComponent extends Component {
         else {
           console.log(res);
           let tempData = JSON.stringify(res);
+          console.log(tempData);
           alert(tempData);
           // this.props.navigator.push({
           //   title: res.title || 'No Title',
@@ -68,12 +69,16 @@ export default class SearchComponent extends Component {
     return (
       <View style={styles.main}>
         <Text style={styles.title}>Search For Github User</Text>
-        <TextInput style={styles.searchInput}/>
+        <TextInput style={styles.searchInput}
+          value = {this.state.username}
+          onChangeText = {(username) => this.setState({username})}
+          />
         <TouchableHighlight style = {styles.button} // underlayColor= "white"
                 onPress = {this.handleSubmit} >
               <Text style={styles.buttonText}>SEARCH</Text>
         </TouchableHighlight>
         {showErr}
+        <Text style={styles.lightText}>{this.props.title}</Text>
         <TouchableOpacity style={styles.list}>
           <Text style={styles.lightText}>{this.props.title}</Text>
         </TouchableOpacity>
