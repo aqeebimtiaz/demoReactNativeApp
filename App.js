@@ -38,7 +38,7 @@ export default class App extends React.Component {
         return(
             <View style={styles.container}>
                 <Image source = {icon} style={{width: 250, height: 110}}/>
-                
+
                 <SearchComponent/>
                 <TextInput
                     style = {styles.textInput}
@@ -53,7 +53,7 @@ export default class App extends React.Component {
                     blurOnSubmit={true}
                     value = {this.state.inputValue}
                     onChangeText = {this.changeText}
-                />
+                /> //whll be deprecated later
             </View>
         )
     }
